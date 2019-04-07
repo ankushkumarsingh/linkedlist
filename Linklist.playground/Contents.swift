@@ -13,7 +13,7 @@ class LinkedList<T>{
   
   var head : Node<T>?
   
-  func count(head : Node<T>?)->Int{
+  func count()->Int{
     var count = 0
     var current = head
     if current == nil {
@@ -39,6 +39,7 @@ class LinkedList<T>{
       previous = current
       current = ahead
     }
+    head = previous
   }
   
   func appendAtFirst(_ value : T ){
